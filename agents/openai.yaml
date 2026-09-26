@@ -1,0 +1,7 @@
+interface:
+  display_name: "课程agent设计和解读"
+  short_description: "将课程大纲转为知识领域、六级评价标准及初始与目标级别表格"
+  default_prompt: "请使用 $course-agent-design 解读课程大纲，生成知识领域、定义、L1-L6评估标准JSON数组、初始级别和目标级别五列表格。"
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,602 @@
+{
+  "schema_version": "course-agent-design-v1",
+  "course": "概率论与数理统计I",
+  "scope": "本科培养栏目课程；先修高等数学II；上海科技大学64学时，按7个主模块设计12领域；可选回归与方差分析不纳入本示例。",
+  "source_facts": [
+    {
+      "id": "S1",
+      "accessed_at": "2026-09-26",
+      "verification": "official_body_read",
+      "title": "概率论与数理统计I教学大纲",
+      "institution": "上海科技大学",
+      "teacher": null,
+      "hours": 64,
+      "version": "网址日期2020-08-07，正文未标修订日",
+      "url": "https://ims.shanghaitech.edu.cn/2020/0807/c7363a54606/page.htm"
+    }
+  ],
+  "interpretation_note": "官方大纲提供课程范围和教学内容；本表领域拆分、定义、六级标准、初始与目标单级均为AI课程设计示例。通常10–20领域，数量由边界决定；未修改任何既有看板。",
+  "domains": [
+    {
+      "id": "probability-statistics-01",
+      "name": "随机事件与概率",
+      "definition": "以事件集合及概率规则描述随机试验；条件更新另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别样本空间、事件、互斥和概率公理，符号对应准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释互斥与穷尽的区别，用事件图说明加法规则。"
+        },
+        {
+          "level": "L3",
+          "standard": "将常规随机试验表示成事件并计算概率，结果满足基本约束。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析样本空间选择对等可能假设的影响，指出重复计数原因。"
+        },
+        {
+          "level": "L5",
+          "standard": "评审概率模型的样本空间与赋值，依据机制判断合理性。"
+        },
+        {
+          "level": "L6",
+          "standard": "为一个新随机机制构造事件模型，验证归一性及目标事件表达。"
+        }
+      ],
+      "initial_level": "L1",
+      "target_level": "L3",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按能够识记相关初等概念规划，仍待入课核验"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：将常规随机试验表示成事件并计算概率，结果满足基本约束。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块1",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-02",
+      "name": "条件概率与独立性",
+      "definition": "利用已知信息更新概率，处理全概率与贝叶斯；随机变量条件期望另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "陈述条件概率、独立性和贝叶斯关系，分母条件正确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释独立与互斥的差别，并说明条件信息如何改变样本范围。"
+        },
+        {
+          "level": "L3",
+          "standard": "用全概率与贝叶斯解决常规问题，列清条件事件并核验。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析筛选或分组造成的概率变化，区分条件独立与无条件独立。"
+        },
+        {
+          "level": "L5",
+          "standard": "审查基于检测结果的判断，结合基础概率和误报漏报证据指出局限。"
+        },
+        {
+          "level": "L6",
+          "standard": "为多阶段随机信息设计更新方案，列明条件结构并验证一致性。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析筛选或分组造成的概率变化，区分条件独立与无条件独立。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块1",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-03",
+      "name": "一维随机变量与分布",
+      "definition": "用离散或连续分布表示单个随机量，含常见分布的模型选择；变量变换另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别分布律、密度和分布函数，正确写出归一条件。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释密度值与事件概率的区别，说明离散和连续表达的联系。"
+        },
+        {
+          "level": "L3",
+          "standard": "根据已知机制使用合适的一维分布计算概率，参数与区间处理正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析两个候选分布的机制差异，指出支持集或参数不匹配。"
+        },
+        {
+          "level": "L5",
+          "standard": "评价分布假设是否适合给定生成机制，以条件和反例支持判断。"
+        },
+        {
+          "level": "L6",
+          "standard": "为含混合或分段机制的随机量构造有效分布，验证归一与概率解释。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L3",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：根据已知机制使用合适的一维分布计算概率，参数与区间处理正确。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块2、4",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-04",
+      "name": "联合与边缘分布",
+      "definition": "描述两个随机量的联合关系，求边缘与条件分布；条件均值另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别联合、边缘、条件分布及支持区域，符号和维数正确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释相同边缘分布为何不能唯一确定联合关系，提供例证。"
+        },
+        {
+          "level": "L3",
+          "standard": "由给定联合分布求边缘及条件概率，积分或求和范围正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析支持区域与依赖结构，判断独立性并给出充分依据。"
+        },
+        {
+          "level": "L5",
+          "standard": "审查根据边缘分布断言独立的推理，构造反例验证其缺陷。"
+        },
+        {
+          "level": "L6",
+          "standard": "构造满足指定边缘但不同依赖结构的联合分布，并验证要求。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析支持区域与依赖结构，判断独立性并给出充分依据。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块2",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-05",
+      "name": "随机变量函数的分布",
+      "definition": "研究随机量变换后的概率规律；常见原始分布与数值特征另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别变换随机变量及其取值范围，说明需追踪的原像。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释变换如何改变概率分布，区分函数值和概率质量。"
+        },
+        {
+          "level": "L3",
+          "standard": "用分布函数法或离散求和求简单变换分布，检查归一性。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析非单调变换的多原像结构，定位漏计区间造成的错误。"
+        },
+        {
+          "level": "L5",
+          "standard": "比较两种变换求解方法，依据适用前提与计算可靠性作判断。"
+        },
+        {
+          "level": "L6",
+          "standard": "设计获得指定简单输出分布的随机变换，并证明其分布符合要求。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L3",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：用分布函数法或离散求和求简单变换分布，检查归一性。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块2",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-06",
+      "name": "期望、方差与相关",
+      "definition": "通过均值、波动、矩和协方差概括随机量；条件期望及生成函数另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "陈述期望、方差、协方差和相关系数定义及存在条件。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释零相关为何一般不等于独立，并用例子区分。"
+        },
+        {
+          "level": "L3",
+          "standard": "计算给定随机量及线性组合的均值方差，交叉项处理正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析相关结构对总量波动的影响，区分边缘变化与依赖变化。"
+        },
+        {
+          "level": "L5",
+          "standard": "评价只用均值或相关系数概括数据的结论，指出信息损失与反例。"
+        },
+        {
+          "level": "L6",
+          "standard": "构造满足指定均值方差且关系不同的随机模型，验证约束与局限。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析相关结构对总量波动的影响，区分边缘变化与依赖变化。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块3",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-07",
+      "name": "条件期望",
+      "definition": "在给定信息下形成随机量的平均预测，区分条件均值与无条件均值。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别条件期望的对象与记号，说明条件信息是什么。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释条件期望为何随所知信息变化，区分数值与随机函数。"
+        },
+        {
+          "level": "L3",
+          "standard": "从离散或连续联合模型计算条件期望，条件分布和积分范围正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分解总体均值与分组均值的关系，解释权重变化带来的差异。"
+        },
+        {
+          "level": "L5",
+          "standard": "评审以条件均值作预测的方案，检查信息可获得性和模型前提。"
+        },
+        {
+          "level": "L6",
+          "standard": "为有限信息下的预测任务构造条件均值方案，并用模型验证一致性。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分解总体均值与分组均值的关系，解释权重变化带来的差异。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块3",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-08",
+      "name": "生成函数与分布表征",
+      "definition": "借助生成函数组织矩和概率信息；直接计算期望与分布建模各另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别所采用生成函数的定义，说明参数与存在范围。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释导数与矩或概率系数的联系，区分不同生成函数。"
+        },
+        {
+          "level": "L3",
+          "standard": "求简单分布的生成函数并恢复所需矩，检查定义域条件。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析独立随机量之和的生成函数结构，指出独立假设的作用。"
+        },
+        {
+          "level": "L5",
+          "standard": "审查用生成函数比较分布的论证，核对存在性与唯一性前提。"
+        },
+        {
+          "level": "L6",
+          "standard": "为一个有限随机和设计生成函数求解方案，并与直接枚举交叉验证。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L3",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：求简单分布的生成函数并恢复所需矩，检查定义域条件。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块3",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-09",
+      "name": "大数定律与中心极限定理",
+      "definition": "区分样本平均趋稳与标准化波动近似；具体参数估计另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别大数定律和中心极限定理的对象、标准化形式及条件。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释均值趋稳与分布近似是不同结论，不把有限样本当作确定值。"
+        },
+        {
+          "level": "L3",
+          "standard": "在条件满足时使用正态近似计算样本均值概率，标准化正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析独立性、矩条件和样本量改变时近似可能失效的原因。"
+        },
+        {
+          "level": "L5",
+          "standard": "评价某项大样本近似结论，列出可检验前提和误差风险。"
+        },
+        {
+          "level": "L6",
+          "standard": "设计比较不同样本规模近似表现的实验方案，明确指标与预期验证。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析独立性、矩条件和样本量改变时近似可能失效的原因。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块5",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-10",
+      "name": "点估计",
+      "definition": "从样本构造参数的单点估计并比较性质；不确定性区间另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别参数、估计量与估计值，并陈述基本评价性质。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释估计量随样本变化的含义，区分偏差与单次误差。"
+        },
+        {
+          "level": "L3",
+          "standard": "对简单模型求矩估计或似然估计，约束及解的合法性正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析两种估计量偏差或波动的来源，区分有限样本与渐近性质。"
+        },
+        {
+          "level": "L5",
+          "standard": "按明确损失或精度准则比较估计方案，说明取舍与适用条件。"
+        },
+        {
+          "level": "L6",
+          "standard": "针对给定抽样机制构造估计方案，并通过推导或模拟检验其性质。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析两种估计量偏差或波动的来源，区分有限样本与渐近性质。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块6",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-11",
+      "name": "区间估计",
+      "definition": "用样本形成参数的不确定性区间；点值与检验决策另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别置信水平、区间和覆盖率，术语及符号准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释重复抽样下覆盖率的含义，避免给固定参数作错误概率解读。"
+        },
+        {
+          "level": "L3",
+          "standard": "为常规总体参数计算置信区间，正确选择分布与自由度。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析样本量、方差和置信水平对宽度的影响，指出适用条件变化。"
+        },
+        {
+          "level": "L5",
+          "standard": "评审区间报告，核对抽样前提、覆盖含义和不确定性表达。"
+        },
+        {
+          "level": "L6",
+          "standard": "为指定精度目标设计抽样与区间估计流程，检验精度和覆盖表现。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：分析样本量、方差和置信水平对宽度的影响，指出适用条件变化。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块6",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics-12",
+      "name": "假设检验",
+      "definition": "在错误控制准则下根据样本作统计决策；效应大小和因果结论不由显著性替代。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别原假设、显著性水平、两类错误和检验统计量。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释p值与显著性结论的含义，不把未拒绝当作证实原假设。"
+        },
+        {
+          "level": "L3",
+          "standard": "完成适用的常规t或方差相关检验，假设、拒绝域和结论对应正确。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析单双侧选择与检验前提改变的影响，区分显著性和效应大小。"
+        },
+        {
+          "level": "L5",
+          "standard": "评审一份检验报告，依据错误控制、前提和实际意义判断结论是否越界。"
+        },
+        {
+          "level": "L6",
+          "standard": "为一个实际比较问题设计检验方案，预先规定假设、数据需求与错误控制。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L5",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "没有学生诊断；暂按尚未具备本领域L1基础规划，实际未知不能判作L0"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "由大纲内容设计的目标任务：评审一份检验报告，依据错误控制、前提和实际意义判断结论是否越界。。大纲未直接规定本L标签。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "模块7",
+          "coverage": "required"
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    "未有学生诊断；初始级别均为规划假设",
+    "目标级别和评价标准尚未经目标班教师确认；不是原教师明确给出的L等级",
+    "旧版公开大纲不能证明2026年实际教学安排"
+  ]
+}

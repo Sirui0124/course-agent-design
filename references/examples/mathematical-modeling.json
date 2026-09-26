@@ -1,0 +1,613 @@
+{
+  "schema_version": "course-agent-design-v1",
+  "course": "数学建模",
+  "scope": "保留用户已选12领域；面向完成数学先修课的本科单学期应用建模规划。48学时本科及40学时研究生大纲仅作分层参考；不把两课静默拼为某教师原课程。",
+  "source_facts": [
+    {
+      "id": "S1",
+      "institution": "上海科技大学",
+      "title": "数学建模教学大纲",
+      "url": "https://ims.shanghaitech.edu.cn/2020/0807/c7363a54614/page.htm",
+      "hours": 48,
+      "teacher": null,
+      "version": "网址日期2020-08-07",
+      "accessed_at": "2026-09-26",
+      "verification": "official_body_read"
+    },
+    {
+      "id": "S2",
+      "institution": "中国科学院大学",
+      "title": "数学模型及其应用",
+      "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/196037",
+      "hours": 40,
+      "teacher": "杨文国",
+      "version": null,
+      "accessed_at": "2026-09-26",
+      "verification": "official_body_read"
+    }
+  ],
+  "interpretation_note": "固定目录来自用户选择；领域定义、六级标准和目标单级为AI建议。总体为9项L4、1项L3、1项L5、1项L6；整数、多目标及独立模型验证并非被上述大纲逐项完整证明。初始L0/L1均为待测规划假设。",
+  "domains": [
+    {
+      "id": "model-01",
+      "name": "问题抽象与建模假设",
+      "definition": "把现实问题表述成变量、边界和假设，说明简化造成的影响；具体求解方法另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别变量、参数、约束和假设，正确区分各自作用。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释一项假设如何简化现实问题，说明它省略了什么。"
+        },
+        {
+          "level": "L3",
+          "standard": "对结构清楚的情境列出变量和约束，单位及关系一致。"
+        },
+        {
+          "level": "L4",
+          "standard": "拆解开放情境中的因果与约束关系，分析关键假设改变对模型边界的影响。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据可检验性、数据可得性和偏差风险评价假设，给出证据和修正理由。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新情境构造完整的问题表达与假设体系，并设计检验其合理性的方法。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "主目标是识别结构和假设后果；无需每次都从零发明方法。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "二、教学目的",
+          "coverage": "purpose"
+        }
+      ]
+    },
+    {
+      "id": "model-02",
+      "name": "统计建模与数据描述",
+      "definition": "用描述统计与抽样推断概括数据、表达不确定性；预测关系和分类模型另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别样本、总体、均值、离散程度及推断不确定性，术语准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释中心趋势与分布差异，区分样本描述和总体推断。"
+        },
+        {
+          "level": "L3",
+          "standard": "对给定数据完成清理、汇总与适用的统计计算，记录单位和缺失处理。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析异常、分组和抽样偏差如何改变结论，区分数据证据与解释假设。"
+        },
+        {
+          "level": "L5",
+          "standard": "评审统计报告，依据代表性、误差和方法前提判断结论是否越界。"
+        },
+        {
+          "level": "L6",
+          "standard": "为实际问题设计采样、描述和推断流程，明确数据需求并验证方案可行性。"
+        }
+      ],
+      "initial_level": "L1",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按能识别先修数学中的相关基础术语规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "需要辨别样本代表性、数据模式与推断局限，超过机械计算统计量。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第1章",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-03",
+      "name": "回归与预测",
+      "definition": "建立变量关系以拟合或预测，处理残差、验证与预测误差；相关关系不直接作因果结论。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别响应、解释变量、残差和训练验证划分，定义准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释拟合误差与泛化误差的差别，区分关联预测与因果推断。"
+        },
+        {
+          "level": "L3",
+          "standard": "拟合给定回归模型并完成独立验证，报告合理误差指标。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析残差模式、共线性或分布变化，说明哪些结构导致预测失效。"
+        },
+        {
+          "level": "L5",
+          "standard": "按验证误差、复杂度和应用代价比较模型，说明选择及局限。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新预测任务构造特征、模型和验证流程，并以基线比较证明设计效果。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "关注关系结构、残差和预测误差来源；方法选择评价可作为L5扩展。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "2.1",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-04",
+      "name": "多元分析与分类",
+      "definition": "用多个指标组织对象、降维或分类，分析特征和类别误差；连续响应预测另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别特征、类别、训练标签及分类误差，概念对应准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释量纲、特征冗余和类别不均衡为何影响结果。"
+        },
+        {
+          "level": "L3",
+          "standard": "按给定方法完成标准化、分类或降维，正确划分数据并核验输出。"
+        },
+        {
+          "level": "L4",
+          "standard": "分解误分类的来源，分析特征选择、数据泄漏与类别结构的影响。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据类别代价与验证指标评价候选方案，避免仅凭总体准确率决策。"
+        },
+        {
+          "level": "L6",
+          "standard": "为多指标实际任务设计表示和分类流程，验证不同类别下的适用性。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "要求解释特征与错误结构，不以调用分类函数作为完成标准。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第2章",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-05",
+      "name": "线性与整数规划",
+      "definition": "以线性目标和约束表达资源分配，含整数决策；非线性关系和多目标取舍另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别决策变量、目标、可行域和整数限制，符号与单位正确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释线性松弛与整数可行性的差异，说明取整为何可能失效。"
+        },
+        {
+          "level": "L3",
+          "standard": "把常规分配问题写成模型并求解，回验全部约束。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析约束变化、瓶颈与整数性对方案的影响，区分无解和求解失败。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据可行性、最优性证据和业务代价审查方案，说明求解间隙或局限。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新组合决策问题构造线性或整数模型，设计验证用例并解释约束完整性。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "需能解释约束与整数条件改变的后果，常规求解仅是基础。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第3章；整数规划为固定目录扩展",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-06",
+      "name": "非线性与多目标优化",
+      "definition": "处理非线性目标约束及多个目标间权衡，区分局部最优与全局证据；线性单目标另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别局部最优、约束、目标权重与帕累托含义，术语准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释权重和初值为何改变候选方案，不把单次收敛当作全局最优。"
+        },
+        {
+          "level": "L3",
+          "standard": "用给定适用方法求解常规非线性或多目标问题，检查可行性。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析初值、约束和权重变化对结果的影响，解释取舍结构。"
+        },
+        {
+          "level": "L5",
+          "standard": "按照目标偏好、稳健性与可行性评价方案，明确全局性证据的不足。"
+        },
+        {
+          "level": "L6",
+          "standard": "为实际冲突目标设计优化与比较方案，构造可解释的候选集并验证权衡。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "本科通识建模宜以分析局部性和权衡为共同目标，L5按项目需要扩展。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第4章；多目标为固定目录扩展",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-07",
+      "name": "图论与网络模型",
+      "definition": "将对象与关系表示为图网络，处理路径、连通和流量决策；动态演化与一般优化另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别节点、边、权重、容量及常见路径与流问题，概念准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释有向无向、权重容量的区别，说明各自对应的现实含义。"
+        },
+        {
+          "level": "L3",
+          "standard": "对给定网络使用适当算法求路径、连接或流，验证约束。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析负权、断连、容量瓶颈或删边如何影响算法适用性及结果。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据现实约束、算法前提与目标效果评价网络方案，指出遗漏关系。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新关系型问题设计图表示和求解流程，验证映射、算法与现实解释一致。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "核心是选对图结构和算法条件，并解释瓶颈及网络变化。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第5章",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-08",
+      "name": "动态系统与微分方程模型",
+      "definition": "以状态变量和变化率描述演化，处理初值、参数和稳定性；纯数值求解算法另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别状态、变化率、初值、参数和平衡点，表达准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释方程各项对应的变化机制，说明初值如何区分轨迹。"
+        },
+        {
+          "level": "L3",
+          "standard": "建立给定机制的简单微分方程并求解，检验初值与量纲。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析平衡状态及参数变化对轨迹的影响，识别模型可能的失效边界。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据数据、机制和稳定性证据评价动态模型，区分拟合成功与机制可信。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新演化问题构造状态方程和验证计划，比较情景并解释模型选择。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "需要从变化规律解释模型行为和参数影响，不要求掌握专门动力系统理论。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S2",
+          "section": "第3、4章",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-09",
+      "name": "数值计算与近似求解",
+      "definition": "通过数值积分、求根或迭代近似完成计算，报告精度与停止条件；模型机制及有效性另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别步长、容差、迭代次数和误差，区分精度设置与实际误差。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释离散化和迭代近似的含义，说明数值输出不必等于精确解。"
+        },
+        {
+          "level": "L3",
+          "standard": "执行适用的数值方法，记录容差与停止条件并用残差或基准核验结果。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析步长、初值或病态性导致的误差变化，定位异常输出原因。"
+        },
+        {
+          "level": "L5",
+          "standard": "根据精度、稳定性和计算成本评价算法结果，说明可靠性边界。"
+        },
+        {
+          "level": "L6",
+          "standard": "为计算受限的问题设计组合近似方案，用独立基准验证精度与效率。"
+        }
+      ],
+      "initial_level": "L1",
+      "target_level": "L3",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按能识别先修数学中的相关基础术语规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "作为建模支持工具，先达到可靠执行和结果核验；误差机理分析列L4扩展。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "第6章",
+          "coverage": "required"
+        }
+      ]
+    },
+    {
+      "id": "model-10",
+      "name": "随机模拟",
+      "definition": "以随机采样和重复仿真估计结果分布，含蒙特卡洛误差；确定性数值近似另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别随机种子、采样分布、重复次数和蒙特卡洛误差，概念准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释模拟波动与模型不确定性的区别，说明重复运行的作用。"
+        },
+        {
+          "level": "L3",
+          "standard": "按给定随机机制实现可复现模拟，记录参数并核验基础分布。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析样本量和随机机制对估计波动的影响，区分模拟误差与模型偏差。"
+        },
+        {
+          "level": "L5",
+          "standard": "根据收敛、独立重复和基线比较评价模拟结论，判断精度是否满足任务。"
+        },
+        {
+          "level": "L6",
+          "standard": "为新随机问题设计采样与仿真方案，给出误差控制及独立验证方法。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L4",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "应能解释随机波动与重复试验结果，避免把单次模拟当作稳定结论。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "二、教学目的：随机模拟",
+          "coverage": "purpose"
+        }
+      ]
+    },
+    {
+      "id": "model-11",
+      "name": "模型检验与敏感性分析",
+      "definition": "依据数据、假设扰动和任务准则审查模型可靠性，识别敏感参数与失效范围；单纯求解另列。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别验证集、敏感参数、稳健性和失效范围，概念准确。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释拟合、验证与敏感性检查的差别，说明各自不能证明什么。"
+        },
+        {
+          "level": "L3",
+          "standard": "执行预先给定的验证和参数扰动，正确整理误差与结果变化。"
+        },
+        {
+          "level": "L4",
+          "standard": "分析敏感性来源和不同检验结果的矛盾，指出主导因素及依赖条件。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据独立证据和预设准则评价模型可用性，明确局限、风险与改进优先级。"
+        },
+        {
+          "level": "L6",
+          "standard": "针对新模型设计互补验证与压力测试体系，检验其能否发现关键失效模式。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L5",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "建模必须能够审查自身结论；要求依据证据评价，不能停在计算敏感度。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "二、教学目的；独立检验标准为AI设计",
+          "coverage": "purpose"
+        }
+      ]
+    },
+    {
+      "id": "model-12",
+      "name": "综合建模设计与表达",
+      "definition": "围绕开放问题整合方法、数据与验证，形成可执行方案和清晰论证；单一方法熟练度另评。",
+      "rubric": [
+        {
+          "level": "L1",
+          "standard": "识别建模报告的问题、方法、结果和局限部分，结构要素齐全。"
+        },
+        {
+          "level": "L2",
+          "standard": "解释模型选择、数据与结论之间的对应关系，能复述方案逻辑。"
+        },
+        {
+          "level": "L3",
+          "standard": "按给定框架完成案例建模及报告，结果可复现且论证与证据一致。"
+        },
+        {
+          "level": "L4",
+          "standard": "拆解跨方法方案中的依赖和冲突，分析误差如何传递到最终结论。"
+        },
+        {
+          "level": "L5",
+          "standard": "依据任务目标、证据和现实约束评审完整方案，比较替代路径并说明取舍。"
+        },
+        {
+          "level": "L6",
+          "standard": "针对开放问题自主构造并整合建模方案，完成验证、复现材料和有边界的结论表达。"
+        }
+      ],
+      "initial_level": "L0",
+      "target_level": "L6",
+      "initial_basis": {
+        "type": "planning_assumption",
+        "note": "未有学生诊断；暂按尚未形成该领域建模基础规划，实际水平待测；不从先修课程断言已掌握"
+      },
+      "target_basis": {
+        "type": "ai_design_suggestion",
+        "note": "整门建模课的综合成果应包含学生自主方案构造和验证；L6不要求科研原创。 所选目标是任务类型，不是学生成绩。"
+      },
+      "source_mapping": [
+        {
+          "source_id": "S1",
+          "section": "二、教学目的：建模设计与计算机实现",
+          "coverage": "purpose"
+        }
+      ]
+    }
+  ],
+  "uncertainties": [
+    "未有目标班学期计划与入课诊断",
+    "固定12类的整数、多目标、模型验证等边界含产品规划，不归属于外部教师原文",
+    "L6仅用于综合项目，需提供自主设计、验证和表达的机会"
+  ]
+}

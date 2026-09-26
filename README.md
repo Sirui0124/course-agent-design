@@ -25,3 +25,5 @@ python3 scripts/validate_render.py references/examples/mathematical-modeling.jso
 ```
 
 校验器检查六级完整性、来源引用、重复ID与级别范围，不证明教学效度。详见 [SKILL.md](SKILL.md) 和 [评价与输出协议](references/rubric-and-schema.md)。
+
+用于批量评价 QAPro 教学对话中学生首次与最高认知表现时，使用 [布鲁姆六层认知层次标注标准](references/bloom-six-level-annotation.md)。该文件同时给出六级、独立三级、U 状态、JSONL 格式和可直接复用的批量 Prompt。
